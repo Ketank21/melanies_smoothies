@@ -2,6 +2,9 @@
 import streamlit as st
 # from snowflake.snowpark.context import get_active_session # this line needed to run streamlit in Snowflake (SiS), for SniS(not) this is not needed
 from snowflake.snowpark.functions import col
+import requests
+smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/watermelon")
+st.text(smoothiefroot_response)
 
 # Write directly to the app
 st.title(f":cup_with_straw: Customize Your Smoothie:cup_with_straw:")
